@@ -27,6 +27,7 @@ custom UICollectionViewCell : 自定义UICollectionViewCell 可扩充自定义
   s.framework  = "UIKit"
 
  s.requires_arc = true
+ 
  s.dependency  "SDWebImage"
 
 end

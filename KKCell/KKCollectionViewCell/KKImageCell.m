@@ -8,7 +8,7 @@
 
 #import "KKImageCell.h"
 
-#import <UIImageView+WebCache.h>
+#import <SDWebImage/UIImageView+WebCache.h>
 
 NSString * const KKImageCellReuseID = @"KKImageCellReuseID";
 
