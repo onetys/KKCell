@@ -4,7 +4,7 @@ Pod::Spec.new do |s|
 
   s.name         = "KKCell"
 
-  s.version      = "0.0.1"
+  s.version      = "0.2.0"
 
   s.summary      = "custom UICollectionViewCell : 自定义UICollectionViewCell"
 
@@ -20,14 +20,22 @@ custom UICollectionViewCell : 自定义UICollectionViewCell 可扩充自定义
 
   s.platform     = :ios, "7.0"
 
-  s.source       = { :git => "https://github.com/TieShanWang/KKCell.git", :tag => "0.0.1" }
+  s.source       = { :git => "https://github.com/TieShanWang/KKCell.git", :tag => "0.2.0" }
 
-  s.source_files  = "KKCell/KKCollectionViewCell/**/*.{h,m,mm}","KKCell/KKCollectionViewCell/*.{h,m,mm}"
+  s.source_files  = "KKCell/KKCollectionViewCell/KKCollectionViewCell.{h,m,mm}"
 
   s.framework  = "UIKit"
 
  s.requires_arc = true
- 
- s.dependency  "SDWebImage"
+
+ s.subspec 'KKTextCell' do tcs
+    tcs.source_files  = "KKCell/KKCollectionViewCell/KKCollectionViewCell.{h,m,mm}","KKCell/KKCollectionViewCell/KKTextCell.{h,m,mm}","KKCell/KKCollectionViewCell/KKCellProtocol.{h,m,mm}"
+    s.framework  = "UIKit"
+end
+s.subspec 'KKImageCell' do ics
+ics.source_files  = "KKCell/KKCollectionViewCell/KKCollectionViewCell.{h,m,mm}","KKCell/KKCollectionViewCell/KKImageCell.{h,m,mm}","KKCell/KKCollectionViewCell/KKCellProtocol.{h,m,mm}"
+ s.framework  = "UIKit"
+ ics.dependency  "SDWebImage"
+end
 
 end
